@@ -1,0 +1,15 @@
+def matrix_dot_vector(a: list[list[int|float]], b: list[int|float]) -> list[int|float]:
+	ans = []
+	for i in range(len(a)):
+		c = a[i]
+		if (len(c) != len(b)):
+			ans.append(-1)
+		else:
+			sum = 0
+			for i in range (len(c)):
+				u = c[i]
+				v = b[i]
+				mul = u*v
+				sum+=mul
+			ans.append(sum)
+	return ans
